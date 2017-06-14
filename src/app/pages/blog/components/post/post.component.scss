@@ -1,0 +1,27 @@
+.ASet {
+  width: auto;
+  float: right;
+  z-index: 10000;
+  position: fixed;
+  right: 0;
+  top:66px;
+  bottom: 0;
+  background-color:#4286c5;
+  overflow: auto;
+  padding: 24px;
+}
+
+.APreview {
+  background: white;
+  color: black;
+  padding-left: 0;
+  border-left:1px solid lightgrey;
+}
+
+.AEdit {
+  padding-right: 0;
+  min-height:425px;
+}
+
+
+

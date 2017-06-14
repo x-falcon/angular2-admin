@@ -1,0 +1,21 @@
+<div class="modal-content" style="background: #4D98D1;">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title">
+        link
+      </h4>
+    </div>
+    <div class="modal-body">
+      <form action="#" class="form" method="post">
+        <div class="form-group">
+          <input name="url" class="form-control" type="text" [(ngModel)]="url" placeholder="notes.hyperlink-dialog" />
+          <div id="noteMenu" class="dropdown"></div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-default cancelBtn">Cancel</button>
+      <button class="btn btn-primary confirm-btn" (click)="link()">OK</button>
+    </div>
+</div>
+

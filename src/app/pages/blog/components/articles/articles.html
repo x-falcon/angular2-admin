@@ -1,0 +1,36 @@
+<div class="horizontal-scroll">
+  <table class="table table-condensed">
+    <thead>
+    <tr>
+      <th class="table-id">#</th>
+      <th>id</th>
+      <th>subject</th>
+      <th>tags</th>
+      <th>authors</th>
+      <th>date</th>
+      <th>modify</th>
+      <th>action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of articles;let i=index;">
+      <td>{{i+1}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.subject}}</td>
+      <td><ng-container *ngFor="let tag of item.tags">{{tag.name}};</ng-container></td>
+      <td>{{item.authors?.join(';')}}</td>
+      <td>{{item.date.timestamp * 1000|date }}</td>
+      <td><ng-container *ngIf="item.modified">{{item.modified.timestamp * 1000|date }}</ng-container></td>
+      <td>
+        <button type="button" class="btn btn-default btn-xs" routerLink="/pages/blog/post/{{item.id}}">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="btn btn-default btn-xs" (click)="remove(item)">
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
